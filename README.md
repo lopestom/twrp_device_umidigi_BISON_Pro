@@ -32,6 +32,6 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 
 - [MD Raza](https://github.com/RazaDroid) - For base device tree used and his infinite help on building this recovery.<br/>
 
-![Umidigi Bison Pro]((https://cdn-files.kimovil.com/default/0006/34/thumb_533552_default_big.jpeg)) "Umidigi Bison Pro")
+![Umidigi Bison Pro]([(https://cdn-files.kimovil.com/default/0006/34/thumb_533552_default_big.jpeg]) "Umidigi Bison Pro")
 
 # ©2022
