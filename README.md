@@ -19,7 +19,7 @@ Rear Depth Sensor  | 5 MP
 Front Camera | 24 MP LED flash, HDR
 Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass, IR Thermometer
 
-![Umidigi Bison Pro]([https://unite4buy.ru/media/images/2021/08/03/umidigi-bison-pro-4_vEyQXCA.jpg] "Umidigi Bison Pro")
+![Umidigi Bison Pro]([https://unite4buy.ru/media/images/2021/08/03/umidigi-bison-pro-4_vEyQXCA.jpg])
 
 ## What's history?
 
@@ -35,4 +35,4 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 TWRP Pictures
 -------------
 ![Initial Menu](https://github.com/lopestom/twrp_device_umidigi_BISON_Pro/blob/android-11.0/.pictures/TWRP3.6.1_11-UMIDIGI%20BISON%20Pro_RU-20220521_103640.jpg?raw=true)
-![Backup Partitions](https://github.com/lopestom/twrp_device_ulefone_Armor_11_5G/blob/android-11.0/.pictures/IMG-72857c56b01e9e9b244a70c2e6921006-V.jpg)
+![Backup Partitions](https://github.com/lopestom/twrp_device_umidigi_BISON_Pro/blob/android-11.0/.pictures/TWRP3.6.1_11-UMIDIGI%20BISON%20Pro_RU-20220521_104739.jpg?raw=true)
