@@ -19,7 +19,7 @@ Rear Depth Sensor  | 5 MP
 Front Camera | 24 MP LED flash, HDR
 Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass, IR Thermometer
 
-![Umidigi Bison Pro](https://unite4buy.ru/media/images/2021/08/03/umidigi-bison-pro-4_vEyQXCA.jpg)
+![Umidigi Bison Pro](https://cdn-files.kimovil.com/default/0006/34/thumb_533552_default_big.jpeg)
 
 ## What's history?
 
