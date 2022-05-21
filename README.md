@@ -34,5 +34,5 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 # ©2022
 TWRP Pictures
 -------------
-![Initial Menu](https://github.com/lopestom/twrp_device_ulefone_Armor_11_5G/blob/android-11.0/.pictures/IMG-d6e652c6051613c37b3393b01dd4f371-V.jpg)
+![Initial Menu](https://github.com/lopestom/twrp_device_umidigi_BISON_Pro/blob/android-11.0/.pictures/TWRP3.6.1_11-UMIDIGI%20BISON%20Pro_RU-20220521_103640.jpg?raw=true)
 ![Backup Partitions](https://github.com/lopestom/twrp_device_ulefone_Armor_11_5G/blob/android-11.0/.pictures/IMG-72857c56b01e9e9b244a70c2e6921006-V.jpg)
