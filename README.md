@@ -19,7 +19,7 @@ Rear Depth Sensor  | 5 MP
 Front Camera | 24 MP LED flash, HDR
 Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass, IR Thermometer
 
-![Umidigi Bison Pro]([https://unite4buy.ru/media/images/2021/08/03/umidigi-bison-pro-4_vEyQXCA.jpg])
+![Umidigi Bison Pro](https://unite4buy.ru/media/images/2021/08/03/umidigi-bison-pro-4_vEyQXCA.jpg)
 
 ## What's history?
 
@@ -29,7 +29,7 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 ## Credits
 
 - [stalkerc from 4pda](https://4pda.to/forum/index.php?showuser=5093778) - For testing & photos of TWRP.<br/>
-- [stalkerc from 4pda](https://4pda.to/forum/index.php?showuser=254002) - For testing of TWRP.<br/>
+- [2mkl from 4pda](https://4pda.to/forum/index.php?showuser=254002) - For testing of TWRP.<br/>
 
 # ©2022
 TWRP Pictures
