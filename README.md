@@ -21,10 +21,9 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 
 ![Umidigi Bison Pro](https://cdn-files.kimovil.com/default/0006/34/thumb_533552_default_big.jpeg)
 
-## What's history?
+## What's the history?
 
 - 21/05/2022 TWRP booted--> boot-BISON_Pro-A11-20220520-1538.img;
-
 
 ## Credits
 
