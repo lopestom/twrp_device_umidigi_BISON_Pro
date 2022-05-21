@@ -19,19 +19,20 @@ Rear Depth Sensor  | 5 MP
 Front Camera | 24 MP LED flash, HDR
 Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass, IR Thermometer
 
+![Umidigi Bison Pro]([https://unite4buy.ru/media/images/2021/08/03/umidigi-bison-pro-4_vEyQXCA.jpg] "Umidigi Bison Pro")
 
-## What's New?
+## What's history?
 
-- Sync latest sources.
-- Fixed Flashlight.
-- Fixed FastbootD.
-- Enabled backup and flash support for all mandatory partitions.
+- 21/05/2022 TWRP booted--> boot-BISON_Pro-A11-20220520-1538.img;
 
 
 ## Credits
 
-- [MD Raza](https://github.com/RazaDroid) - For base device tree used and his infinite help on building this recovery.<br/>
-
-![Umidigi Bison Pro]([https://cdn-files.kimovil.com/default/0006/34/thumb_533552_default_big.jpeg] "Umidigi Bison Pro")
+- [stalkerc from 4pda](https://4pda.to/forum/index.php?showuser=5093778) - For testing & photos of TWRP.<br/>
+- [stalkerc from 4pda](https://4pda.to/forum/index.php?showuser=254002) - For testing of TWRP.<br/>
 
 # ©2022
+TWRP Pictures
+-------------
+![Initial Menu](https://github.com/lopestom/twrp_device_ulefone_Armor_11_5G/blob/android-11.0/.pictures/IMG-d6e652c6051613c37b3393b01dd4f371-V.jpg)
+![Backup Partitions](https://github.com/lopestom/twrp_device_ulefone_Armor_11_5G/blob/android-11.0/.pictures/IMG-72857c56b01e9e9b244a70c2e6921006-V.jpg)
