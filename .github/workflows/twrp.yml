@@ -62,14 +62,14 @@ jobs:
               PATH=~/bin:$PATH
               cd twrp
               export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_BISON_Pro-eng && mka $TARGET -j5
-              cp  out/target/product/BISON_Pro/boot.img    out/target/product/BISON_Pro/boot-BISON_Pro-A11-$(date +"%Y%m%d-%H%M").img  
+              cp  out/target/product/BISON_Pro/boot.img    out/target/product/BISON_Pro/boot-BISON_Pro-encryptable-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
          env:
           GITHUB_TOKEN: ${{ secrets.TEST }}
          with:
-          tag_name: Umidigi_BISON_Pro-RU
+          tag_name: Umidigi_BISON_Pro-RU-encryptable
           name: TWRP36x_11
           files: | 
             twrp/out/target/product/BISON_Pro/boot*.img
