@@ -1,36 +1,36 @@
 #from device
 ro.product.model=BISON Pro
 ro.product.brand=UMIDIGI
-ro.product.name=BISON_Pro_RU
+ro.product.name=BISON_Pro
 ro.product.device=BISON_Pro
 ro.sys.xunhu_bt=BISON Pro
 ro.sys.xunhu_rf_mode=C2K6M
 ro.sys.hxy_wifi_display=yes
-ro.product.xunhu.device=g2069dpd_v1_gd_ym_bisonpr_ru_r
+ro.product.xunhu.device=g2069dpd_v2_gd_ym_bisonpro_n_r
 net.hostname=BISON Pro
 Build.BRAND=UMIDIGI
 ro.product.manufacturer=HXY
 # begin alps properties
-ro.alps.branch=gms_202106_08
-ro.alps.fetch.hash=6d69f5a
-ro.alps.fetch.time=8e520211125104
-ro.alps.commit.hash=6d69f5a
-ro.alps.commit.time=8e520211125104
+ro.alps.branch=gms_202104_06
+ro.alps.fetch.hash=0c97a91
+ro.alps.fetch.time=e1620220421152
+ro.alps.commit.hash=0c97a91
+ro.alps.commit.time=e1620220421152
 # end alps properties
 # begin teksun properties
 ro.teksun.branch=master
-ro.teksun.fetch.hash=b43483e
-ro.teksun.fetch.time=f202111261659
-ro.teksun.commit.hash=102e760
-ro.teksun.commit.time=0202111261705
+ro.teksun.fetch.hash=6d0e756
+ro.teksun.fetch.time=d202204220218
+ro.teksun.commit.hash=b2baeea
+ro.teksun.commit.time=4202204220950
 # end teksun properties
-ro.hxy.display.custom.version=UMIDIGI_BISON Pro.ru_V1.0_20211127
+ro.hxy.display.custom.version=UMIDIGI_BISON Pro_V1.0_20220422
 ro.git.buildinfo=nobody@android-build
-ro.git.buildtime=20211127120355
-ro.xh.display.version=UMIDIGI_BISON PRO.RU_V1.0_20211127
+ro.git.buildtime=20220422150554
+ro.xh.display.version=UMIDIGI_BISON PRO_V1.0_20220422
 ro.xh.modem1=g2069dpdv2_c_ant_ulwctg_cogps
 ro.xh.modem.num=1
-ro.xh.work.path=/home/fu_ym/mtk_r0_mp1_mk/alps
+ro.xh.work.path=/mnt/disk1/liao_l/mtk_mp_r0_mp1/alps
 # end build properties
 ro.sf.lcd_density=480
 ro.hardware.egl=meow
@@ -41,7 +41,6 @@ ro.hardware=mt6768
 ro.vendor.mtk_config_max_dram_size=0x800000000
 ro.vendor.mtk_f2fs_enable=0
 ro.vendor.mtk_system_update_support=1
-ro.crypto.volume.filenames_mode=aes-256-cts:v2
 drm.service.enabled=true
 ro.vendor.mtk_widevine_drm_l3_support=1
 ro.vendor.mtk_emmc_support=1
