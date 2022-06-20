@@ -1,4 +1,4 @@
-#fstab file by lopestom for UMIDIGI_BISON PRO.RU_V1.0_20211127 - g2069dpd_v1_gd_ym_bisonpr_ru_r
+#fstab file by lopestom for UMIDIGI_BISON Pro_V1.0_20210623 - 8GB - g2069dpd_v2_gd_ym_bisonpro_n_r
 /system		        ext4	/dev/block/mapper/system              flags=backup=1;wipeingui;slotselect;logical;display="System_root"
 /vendor             ext4    /dev/block/mapper/vendor             flags=backup=1;wipeingui;logical;display="Vendor_a";slotselect
 /product            ext4    /dev/block/mapper/product             flags=backup=1;wipeingui;logical;display="Product_a";slotselect
