@@ -43,10 +43,10 @@ PRODUCT_MANUFACTURER := HXY
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=BISON_Pro \
-    PRODUCT_NAME=BISON_Pro_RU \
-    PRIVATE_BUILD_DESC="full_g2069dpd_v1_gd_ym_bisonpr_ru_r-user 11 RP1A.200720.011 2109011105 release-keys"
+    PRODUCT_NAME=BISON_Pro \
+    PRIVATE_BUILD_DESC="full_g2069dpd_v2_gd_ym_bisonpro_n_r-user 11 RP1A.200720.011 2105241743 release-keys"
 
-BUILD_FINGERPRINT := UMIDIGI/BISON_Pro_RU/BISON_Pro:11/RP1A.200720.011/2109011105:user/release-keys
+BUILD_FINGERPRINT := UMIDIGI/BISON_Pro/BISON_Pro:11/RP1A.200720.011/2105241743:user/release-keys
 
 # Bypass anti-rollback ROMs protection
 # Set build date to Jan 1 2009 00:00:00
