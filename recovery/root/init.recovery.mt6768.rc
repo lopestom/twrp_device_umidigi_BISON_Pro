@@ -71,7 +71,7 @@ service keymaster_attestation-1-1 /system/bin/vendor.mediatek.hardware.keymaster
 on property:vendor.sys.listener.registered=true
     start gatekeeper-1-0
 
-on property:hwservicemanager.ready=true && property:crypto.ready=1
+on property:hwservicemanager.ready=true && property:crypto.ready=1 && on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     start teed
     start mobicore
     start vendor.keymaster-4-0-trustkernel
