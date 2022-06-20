@@ -69,8 +69,8 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.TEST }}
          with:
-          tag_name: TWRP36x_11
-          name: Umidigi_Bison_Pro_8GB
+          tag_name: Umidigi_BISON_Pro-RU_4GB
+          name: TWRP36x_11
           files: | 
             twrp/out/target/product/BISON_Pro/boot*.img
             twrp/out/target/product/BISON_Pro/ramdisk*.img
