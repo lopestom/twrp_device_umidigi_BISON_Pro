@@ -146,6 +146,7 @@ TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 #TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 #TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/recovery/root/init.recovery.mt6768.rc
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
 
 # AVB
 BOARD_AVB_ENABLE := true
