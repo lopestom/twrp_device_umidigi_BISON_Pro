@@ -30,8 +30,9 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 
 ## Credits
 
-- [stalkerc from 4pda](https://4pda.to/forum/index.php?showuser=5093778) - For testing & photos of TWRP.<br/>
-- [2mkl from 4pda](https://4pda.to/forum/index.php?showuser=254002) - For testing of TWRP.<br/>
+- [Serega77plus from 4pda](https://4pda.to/forum/index.php?showuser=5528632) - For testing TWRP.
+- [TeamWin](https://github.com/TeamWin) for TWRP SC.
+* TWRP version 3.7.0_11 *
 
 # ©2022
 TWRP Pictures
