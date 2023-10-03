@@ -26,7 +26,22 @@ Features| Fingerprint (side-mountedn sensor), accelerometer, proximity, compass,
 
 ## What's the history?
 
-- 21/05/2022 TWRP booted--> boot-BISON_Pro-A11-20220520-1538.img;
+- 04/10/2023 TWRP booted--> Working?? Not Working???
+boot-BISON_Pro-A11-202310dd.img
+<details><summary>Works - Click to open</summary>
+<p>
+
+- [?] ADB
+- [?] Decryption (Android 11)
+- [X] Display
+- [?] Fasbootd
+- [?] Flashing
+- [?] MTP
+- [?] Sideload
+- [?] USB OTG
+- [?] Vibrator
+</p>
+</details>
 
 ## Credits
 
