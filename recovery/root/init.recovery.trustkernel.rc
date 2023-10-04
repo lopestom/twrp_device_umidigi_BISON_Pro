@@ -1,23 +1,51 @@
-on init
-    mkdir /mnt/vendor 0755 root root
-    mkdir /mnt/vendor/protect_f 0770 root root
-    mkdir /mnt/vendor/protect_s 0770 root root
-#    mkdir /mnt/vendor/protect_f 0771 root root
-#    mkdir /mnt/vendor/protect_s 0771 root root
-    mkdir /mnt/vendor/persist 0755 root root
-    mkdir /mnt/vendor/nvdata 0771 root root
-    mkdir /mnt/vendor/nvcfg 0771 root root
+on fs
+    mkdir /mnt/vendor 0755 system system
+    mkdir /mnt/vendor/apd 0771 system system
+    mkdir /mnt/vendor/protect_f 0770 system system
+    mkdir /mnt/vendor/protect_s 0770 system system
+    mkdir /mnt/vendor/persist 0755 system system
+    mkdir /mnt/vendor/nvdata 0771 system system
+    mkdir /mnt/vendor/nvcfg 0771 system system
+    mount ext4 /dev/block/by-name/apd /mnt/vendor/apd rw wait
     mount ext4 /dev/block/by-name/protect1 /mnt/vendor/protect_f rw wait
     mount ext4 /dev/block/by-name/protect2 /mnt/vendor/protect_s rw wait
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw wait
     mount ext4 /dev/block/by-name/nvdata /mnt/vendor/nvdata rw wait
     mount ext4 /dev/block/by-name/nvcfg /mnt/vendor/nvcfg rw wait
-    
-service trustkernel.twrp /vendor/bin/trustkernel.twrp.sh
-    user root
+    mkdir /mnt/vendor/persist/t6_twrp 0755 system system
+    mkdir /mnt/vendor/protect_f/tee_twrp 0755 system system
+    exec u:r:recovery:s0 system -- /vendor/bin/trustkernel.twrp.sh
+    install_keyring
+    setprop crypto.ready 1
+
+service keystore_auth /system/bin/keystore_auth
+    oneshot
+    user system
     group root
     disabled
-    seclabel u:r:recovery:s0    
-    
-on early-fs
-    start trustkernel.twrp
+    seclabel u:r:recovery:s0
+
+service keystore /system/bin/keystore /tmp/misc/keystore
+    user root
+    group root drmrpc readproc
+    disabled
+    seclabel u:r:recovery:s0
+
+on property:hwservicemanager.ready=true
+    start vendor.keymaster-4-0-trustkernel
+    start vendor.gatekeeper-1-0
+
+on property:ro.crypto.state=unsupported
+    stop teed
+    stop vendor.keymaster-4-0-trustkernel
+    stop vendor.gatekeeper-1-0
+
+on property:ro.crypto.state=unencrypted
+    stop teed
+    stop vendor.keymaster-4-0-trustkernel
+    stop vendor.gatekeeper-1-0
+
+on property:twrp.decrypt.done=true
+    stop teed
+    stop vendor.keymaster-4-0-trustkernel
+    stop vendor.gatekeeper-1-0

@@ -1,9 +1,6 @@
 on early-init
     write /sys/module/musb_hdrc/parameters/kernel_init_done 1
 
-on property:hwservicemanager.ready=true
-    setprop sys.usb.config adb
-
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.ffs.aio_compat 1
