@@ -1,0 +1,78 @@
+#fstab file by lopestom for UMIDIGI_BISON Pro_V1.0_20210623_20220422-1505 - g2069dpd_v2_gd_ym_bisonpro_n_r
+/system		        ext4	/dev/block/mapper/system            flags=backup=1;wipeingui;logical;display="System_root";slotselect
+/vendor             ext4    /dev/block/mapper/vendor            flags=backup=1;wipeingui;logical;display="Vendor";slotselect
+/product            ext4    /dev/block/mapper/product           flags=backup=1;wipeingui;logical;display="Product";slotselect
+
+# Images
+/system_image	    emmc  	/dev/block/mapper/system            flags=backup=1;flashimg=1;slotselect;logical;display="System_Image"
+/vendor_image	    emmc  	/dev/block/mapper/vendor            flags=backup=1;flashimg=1;slotselect;logical;display="Vendor_Image"
+/product_image	    emmc	/dev/block/mapper/product           flags=backup=1;flashimg=1;slotselect;logical;display="Product_Image"
+
+# Core Partitions
+/metadata        ext4    /dev/block/platform/bootdevice/by-name/md_udc         flags=backup=1;display="metadata"
+/data            ext4    /dev/block/platform/bootdevice/by-name/userdata       flags=fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+
+# Common partition
+/boot            emmc    /dev/block/platform/bootdevice/by-name/boot               flags=backup=1;display="Boot";flashimg=1;slotselect
+/vendor_boot	 emmc	/dev/block/platform/bootdevice/by-name/vendor_boot		 flags=display="Vendor Boot";backup=1;flashimg=1;slotselect
+/dtbo            emmc    /dev/block/platform/bootdevice/by-name/dtbo               flags=backup=1;display="Dtbo";flashimg=1;slotselect
+/mnt/vendor/persist         ext4    /dev/block/platform/bootdevice/by-name/persist          flags=display="persist"
+/persist_image   emmc    /dev/block/platform/bootdevice/by-name/persist            flags=backup=1;display="Persist Image";flashimg=1
+/vbmeta		     emmc	/dev/block/platform/bootdevice/by-name/vbmeta           flags=display="vbmeta";backup=1;flashimg=1;slotselect
+/vbmeta_system   emmc    /dev/block/platform/bootdevice/by-name/vbmeta_system      flags=backup=1;display="vbmeta_system";flashimg=1;slotselect
+/vbmeta_vendor   emmc    /dev/block/platform/bootdevice/by-name/vbmeta_vendor      flags=backup=1;display="vbmeta_vendor";flashimg=1;slotselect
+
+# MediaTek partitions
+/bootloader     emmc    /dev/block/platform/bootdevice/by-name/lk               flags=backup=1;display="Bootloader (lk)";flashimg=1
+/bootloader2    emmc    /dev/block/platform/bootdevice/by-name/lk2              flags=backup=1;display="Bootloader (lk2)";flashimg=1
+/logo		    emmc	/dev/block/platform/bootdevice/by-name/logo             flags=display="logo";backup=1;flashimg=1
+/expdb		    emmc	/dev/block/platform/bootdevice/by-name/expdb            flags=display="expdb";backup=1
+/seccfg		    emmc	/dev/block/platform/bootdevice/by-name/seccfg           flags=display="SecCfg";backup=1
+/misc		    emmc	/dev/block/platform/bootdevice/by-name/misc             flags=display="misc";backup=1;flashimg=1
+/para		    emmc	/dev/block/platform/bootdevice/by-name/para             flags=display="para";backup=1;flashimg=1
+/boot_para	    emmc	/dev/block/platform/bootdevice/by-name/boot_para        flags=display="boot_para";backup=1
+/proinfo	    emmc	/dev/block/platform/bootdevice/by-name/proinfo          flags=display="Proinfo";backup=1;flashimg=1
+
+# Non-Volatile (RAM | DATA | CFG)
+/mnt/vendor/nvcfg		    ext4	/dev/block/platform/bootdevice/by-name/nvcfg            flags=display="NvCfg"
+/mnt/vendor/nvdata		    ext4	/dev/block/platform/bootdevice/by-name/nvdata           flags=display="NvData"
+/nvram		    emmc	/dev/block/platform/bootdevice/by-name/nvram            flags=display="NvRam";backup=1;flashimg=1
+
+# Subscriber Identification Module (SIM)
+/mnt/vendor/protect_f	    ext4	/dev/block/platform/bootdevice/by-name/protect1         flags=display="Protect";backup=1
+/mnt/vendor/protect_s	    ext4	/dev/block/platform/bootdevice/by-name/protect2         flags=backup=1;subpartitionof=/protect_f
+
+# Trusted Execution Environment (TEE) - trustzone
+/tee1		    emmc	/dev/block/platform/bootdevice/by-name/tee1             flags=display="Tee1";backup=1;flashimg=1
+/tee2		    emmc	/dev/block/platform/bootdevice/by-name/tee2             flags=display="Tee2";backup=1;flashimg=1
+
+# Factory Reset Protection (FRP)
+/persistent	    emmc	/dev/block/platform/bootdevice/by-name/frp              flags=display="frp";backup=1;flashimg=1
+
+# Firmware
+/gz1            emmc    /dev/block/platform/bootdevice/by-name/gz1              flags=display="gz1"
+/gz2            emmc    /dev/block/platform/bootdevice/by-name/gz2              flags=display="gz2"
+
+# Modem
+/md1img		    emmc	/dev/block/platform/bootdevice/by-name/md1img           flags=display="Modem";backup=1;flashimg=1;slotselect
+/md1dsp         emmc    /dev/block/platform/bootdevice/by-name/md1dsp           flags=display="md1dsp";backup=1;slotselect
+
+# System Control Processor (SCP)
+/scp1		    emmc	/dev/block/platform/bootdevice/by-name/scp1             flags=display="scp1"
+/scp2		    emmc	/dev/block/platform/bootdevice/by-name/scp2             flags=display="scp2"
+
+#Mod lopestom about encrypt_decrypt data
+#/oemkeystore		emmc	/dev/block/platform/bootdevice/by-name/oemkeystore
+#/keystore		emmc	/dev/block/platform/bootdevice/by-name/keystore
+
+# Other partitions
+/otp            emmc    /dev/block/platform/bootdevice/by-name/otp              flags=display="otp";backup=1
+/spmfw		    emmc	/dev/block/platform/bootdevice/by-name/spmfw            flags=display="Spm"
+/sspm_1		    emmc	/dev/block/platform/bootdevice/by-name/sspm_1           flags=display="sspm_1"
+/sspm_2		    emmc	/dev/block/platform/bootdevice/by-name/sspm_2           flags=display="sspm_2"
+/teksunhw       emmc    /dev/block/platform/bootdevice/by-name/teksunhw         flags=display="teksunhw";backup=1;slotselect
+#/odmdtbo emmc /dev/block/platform/bootdevice/by-name/odmdtbo
+
+# External-Devices (SDCARD | OTG)
+/external_sd    auto     /dev/block/mmcblk1p1  /dev/block/mmcblk1    flags=display="External_SDcard";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg        auto     /dev/block/sda1      /dev/block/sda         flags=display="Usb_Otg";storage;wipeingui;removable;fsflags="utf8"
