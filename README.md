@@ -1,8 +1,10 @@
-Device Tree for Umidigi Bison Pro - mt6768 - MT6769T
-============================================================
-
 ### New test OCT_2023 for solve encrypt/decrypt mode.
 
+Device Tree for Umidigi Bison Pro - mt6768 - MT6769T
+============================================================
+[![GPLv3+](https://img.shields.io/badge/license-GPLv3+-red.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+
+Specs: [here](https://www.devicespecifications.com/en/model/60e257a2)
 
 ## Device specifications
 Basic   | Specification Sheet

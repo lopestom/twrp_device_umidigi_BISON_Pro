@@ -47,8 +47,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="full_g2069dpd_v2_gd_ym_bisonpro_n_r-user 11 RP1A.200720.011 2105241743 release-keys"
 
 BUILD_FINGERPRINT := UMIDIGI/BISON_Pro/BISON_Pro:11/RP1A.200720.011/2105241743:user/release-keys
-
-# Bypass anti-rollback ROMs protection
-# Set build date to Jan 1 2009 00:00:00
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.date.utc=1230768000
