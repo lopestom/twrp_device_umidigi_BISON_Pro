@@ -64,7 +64,16 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-service
 
 PRODUCT_PACKAGES_DEBUG += \
+    bootctrl \
     update_engine_client
+
+PRODUCT_PACKAGES += \
+    bootctrl.$(TARGET_BOARD_PLATFORM) \
+    bootctrl.$(TARGET_BOARD_PLATFORM).recovery
+
+# MTK PlPath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -83,10 +92,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service \
 
-TW_OVERRIDE_SYSTEM_PROPS := \
-    "ro.build.product;ro.bootimage.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device=ro.product.product.device;ro.product.system.model;ro.product.name=ro.product.product.name=ro.product.system.name"
+#TW_OVERRIDE_SYSTEM_PROPS := \
+#    "ro.build.product;ro.bootimage.build.fingerprint;ro.build.version.incremental;ro.product.device=ro.product.system.device=ro.product.product.device;ro.product.system.model;ro.product.name=ro.product.product.name=ro.product.system.name"
 
 ## Apex libraries
 #PRODUCT_HOST_PACKAGES += \
 #    libandroidicu
-
