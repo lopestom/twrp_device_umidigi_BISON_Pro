@@ -37,7 +37,7 @@ on property:crypto.ready=1
     start vendor.keymaster-4-0-trustkernel
 
 on property:vendor.sys.listener.registered=true
-    start gatekeeper-1-0
+    start vendor.gatekeeper-1-0
     start vendor.keymaster-4-0-trustkernel
 
 on property:hwservicemanager.ready=true
@@ -69,9 +69,4 @@ on property:twrp.decrypt.done=true && twrp.all.users.decrypted=true
     stop servicemanager
     stop hwservicemanager
     stop keymaster_attestation-1-1
-    stop vendor.gatekeeper-1-0
-
-on property:twrp.decrypt.done=true
-    stop teed
-    stop vendor.keymaster-4-0-trustkernel
     stop vendor.gatekeeper-1-0
