@@ -50,7 +50,7 @@ on property:vendor.trustkernel.log.state=ready
     restorecon /data/vendor/t6/tkcore.log
     setprop vendor.trustkernel.log.state enable
 
-on property:vendor.trustkernel.ready=true && property:vendor.trustkernel.fs.state=ready
+on property:vendor.trustkernel.ready=true
     start tee_check_keybox
 
 service teed /vendor/bin/teed \
