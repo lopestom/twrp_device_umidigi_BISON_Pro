@@ -147,6 +147,6 @@
 # Resume-on-Reboot
 /dev/access-kregistry     0660   system     system
 
-/dev/tkcoredrv            0660   root       system
+/dev/tkcoredrv            0666   root       system
 /dev/mmcblk0rpmb          0660   root       system
 /dev/rpmb0                0660   root       system
