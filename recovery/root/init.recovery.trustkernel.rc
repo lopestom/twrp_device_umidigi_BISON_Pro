@@ -27,10 +27,6 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-on property:vendor.sys.listener.registered=true
-    start vendor.gatekeeper-1-0
-    start vendor.keymaster-4-0-trustkernel
-
 on property:hwservicemanager.ready=true
     start vendor.keymaster-4-0-trustkernel
     start vendor.gatekeeper-1-0
