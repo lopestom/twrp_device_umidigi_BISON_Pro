@@ -1,23 +1,17 @@
 on init
     export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
-
-    export ANDROID_ROOT /system_root
-    # Somehow AOSP build system hasn't provided a symlink here
-    symlink /system_root/system /system
+    export LD_LIBRARY_PATH /system/bin:/vendor/bin
 
 on fs
-    mkdir /mnt/vendor 0700 root root
-    mkdir /mnt/vendor/protect_f 0700 root root
-    mkdir /mnt/vendor/persist 0700 root root
-    mount ext4 /dev/block/platform/bootdevice/by-name/protect1 /mnt/vendor/protect_f
-    mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist
-    mkdir /mnt/vendor/persist/t6_twrp 0700 root root
-    mkdir /mnt/vendor/protect_f/tee_twrp 0700 root root
+    mkdir /mnt/vendor 0755 system system
+    mkdir /mnt/vendor/protect_f 0770 system system
+    mkdir /mnt/vendor/persist 0770 system system
+    mount ext4 /dev/block/platform/bootdevice/by-name/protect1 /mnt/vendor/protect_f rw wait
+    mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist rw wait
+    mkdir /mnt/vendor/persist/t6_twrp 0755 system system
+    mkdir /mnt/vendor/protect_f/tee_twrp 0755 system system
     exec u:r:recovery:s0 system -- /vendor/bin/trustkernel.twrp.sh
-
-on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
     install_keyring
-
     setprop crypto.ready 1
 
 service keystore_auth /system/bin/keystore_auth
@@ -33,40 +27,25 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
-on property:crypto.ready=1
-    start vendor.keymaster-4-0-trustkernel
-
 on property:vendor.sys.listener.registered=true
     start vendor.gatekeeper-1-0
     start vendor.keymaster-4-0-trustkernel
 
 on property:hwservicemanager.ready=true
-    star teed
     start vendor.keymaster-4-0-trustkernel
     start vendor.gatekeeper-1-0
-    start keymaster_attestation-1-1
 
 on property:ro.crypto.state=unsupported
     stop teed
     stop vendor.keymaster-4-0-trustkernel
     stop vendor.gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-    stop keymaster_attestation-1-1
 
 on property:ro.crypto.state=unencrypted
     stop teed
     stop vendor.keymaster-4-0-trustkernel
     stop vendor.gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-    stop keymaster_attestation-1-1
 
 on property:twrp.decrypt.done=true && twrp.all.users.decrypted=true
     stop teed
     stop vendor.keymaster-4-0-trustkernel
-    stop vendor.gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
-    stop keymaster_attestation-1-1
     stop vendor.gatekeeper-1-0
