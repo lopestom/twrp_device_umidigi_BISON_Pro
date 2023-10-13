@@ -81,4 +81,4 @@ ro.sys.usb.storage.type=mtp
 ro.treble.enabled=true
 sys.usb.controller=musb-hdrc
 sys.usb.ffs.aio_compat=true
-fbe.metadata.wrappedkey=true
+#fbe.metadata.wrappedkey=true
