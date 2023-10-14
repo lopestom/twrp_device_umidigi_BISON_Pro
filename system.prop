@@ -7,7 +7,7 @@ ro.sys.xunhu_bt=BISON Pro
 ro.sys.xunhu_rf_mode=C2K6M
 ro.sys.hxy_wifi_display=yes
 ro.product.xunhu.device=g2069dpd_v2_gd_ym_bisonpro_n_r
-Build.BRAND=UMIDIGI
+#Build.BRAND=UMIDIGI
 ro.product.manufacturer=HXY
 # begin alps properties
 ro.alps.branch=gms_202104_06
@@ -33,6 +33,7 @@ ro.xh.work.path=/mnt/disk1/liao_l/mtk_mp_r0_mp1/alps
 
 #from device
 ro.vendor.mediatek.platform=MT6768
+ro.sf.lcd_density=480
 
 # Hardware - Trustkernel Crypt
 ro.boot.hardware=mt6768
