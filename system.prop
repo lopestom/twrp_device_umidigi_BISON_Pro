@@ -7,7 +7,8 @@ ro.sys.xunhu_bt=BISON Pro
 ro.sys.xunhu_rf_mode=C2K6M
 ro.sys.hxy_wifi_display=yes
 ro.product.xunhu.device=g2069dpd_v2_gd_ym_bisonpro_n_r
-#Build.BRAND=UMIDIGI
+net.hostname=BISON Pro
+Build.BRAND=UMIDIGI
 ro.product.manufacturer=HXY
 # begin alps properties
 ro.alps.branch=gms_202104_06
@@ -52,7 +53,6 @@ odm.teksun.fingerprint.chip=fortsense_tee
 ro.vendor.mtk_f2fs_enable=0
 ro.vendor.mtk_emmc_support=1
 #
-persist.adb.nonblocking_ffs=1
 
 # Identity
 Build.BRAND=MTK
@@ -82,4 +82,3 @@ ro.sys.usb.storage.type=mtp
 ro.treble.enabled=true
 sys.usb.controller=musb-hdrc
 sys.usb.ffs.aio_compat=true
-#fbe.metadata.wrappedkey=true
