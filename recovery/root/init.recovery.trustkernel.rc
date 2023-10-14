@@ -1,16 +1,21 @@
 on init
-    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw:/system/lib64/hw
-    export LD_LIBRARY_PATH /system/bin:/vendor/bin
+    export LD_LIBRARY_PATH /system/lib64:/vendor/lib64:/vendor/lib64/hw
 
 on fs
     mkdir /mnt/vendor 0755 system system
     mkdir /mnt/vendor/protect_f 0770 system system
-    mkdir /mnt/vendor/persist 0770 system system
+    mkdir /mnt/vendor/protect_s 0770 system system
+    mkdir /mnt/vendor/nvdata 0771 system system
+    mkdir /mnt/vendor/nvcfg 0771 system system
+    mkdir /mnt/vendor/persist 0755 system system
     mount ext4 /dev/block/platform/bootdevice/by-name/protect1 /mnt/vendor/protect_f rw wait
+    mount ext4 /dev/block/platform/bootdevice/by-name/protect2 /mnt/vendor/protect_s rw wait
     mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist rw wait
-    mkdir /mnt/vendor/persist/t6_twrp 0755 system system
-    mkdir /mnt/vendor/protect_f/tee_twrp 0755 system system
-    exec u:r:recovery:s0 system -- /vendor/bin/trustkernel.twrp.sh
+    mount ext4 /dev/block/platform/bootdevice/by-name/nvdata /mnt/vendor/nvdata rw wait
+    mount ext4 /dev/block/platform/bootdevice/by-name/nvcfg /mnt/vendor/nvcfg rw wait
+    mkdir /mnt/vendor/persist/t6 0755 system system
+    mkdir /mnt/vendor/protect_f/tee 0755 system system
+
     install_keyring
     setprop crypto.ready 1
 
@@ -27,6 +32,9 @@ service keystore /system/bin/keystore /tmp/misc/keystore
     disabled
     seclabel u:r:recovery:s0
 
+on property:crypto.ready=1
+    start vendor.keymaster-4-0-trustkernel
+
 on property:hwservicemanager.ready=true
     start vendor.keymaster-4-0-trustkernel
     start vendor.gatekeeper-1-0
@@ -41,7 +49,7 @@ on property:ro.crypto.state=unencrypted
     stop vendor.keymaster-4-0-trustkernel
     stop vendor.gatekeeper-1-0
 
-on property:twrp.decrypt.done=true && twrp.all.users.decrypted=true
+on property:twrp.decrypt.done=true
     stop teed
     stop vendor.keymaster-4-0-trustkernel
     stop vendor.gatekeeper-1-0
